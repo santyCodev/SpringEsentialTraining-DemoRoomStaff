@@ -1,7 +1,7 @@
 package com.santicodev.springessentialtraining.controller.rest;
 
 import com.santicodev.springessentialtraining.business.services.StaffService;
-import com.santicodev.springessentialtraining.data.StaffMember;
+import com.santicodev.springessentialtraining.data.entity.StaffMember;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,6 +22,6 @@ public class StaffRestController {
 
     @GetMapping
     public List<StaffMember> getAllStaff() {
-        return staffService.getAllStaff();
+        return staffService.getAllStaffMembers();
     }
 }

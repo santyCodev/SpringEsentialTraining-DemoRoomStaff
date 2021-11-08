@@ -1,11 +1,8 @@
 package com.santicodev.springessentialtraining.runners;
 
-import com.santicodev.springessentialtraining.SpringessentialtrainingApplication;
-import com.santicodev.springessentialtraining.data.Room;
+import com.santicodev.springessentialtraining.data.entity.Room;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.CommandLineRunner;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;

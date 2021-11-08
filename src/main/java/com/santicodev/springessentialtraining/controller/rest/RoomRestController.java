@@ -1,7 +1,7 @@
 package com.santicodev.springessentialtraining.controller.rest;
 
 import com.santicodev.springessentialtraining.business.services.RoomService;
-import com.santicodev.springessentialtraining.data.Room;
+import com.santicodev.springessentialtraining.data.entity.Room;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

@@ -1,9 +1,24 @@
-package com.santicodev.springessentialtraining.data;
+package com.santicodev.springessentialtraining.data.entity;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "EMPLOYEE")
 public class StaffMember {
+
+    @Id
+    @Column(name = "EMPLOYEE_ID")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String id;
+
+    @Column(name = "FIRST_NAME")
     private String firstName;
+
+    @Column(name = "LAST_NAME")
     private String lastName;
+
+    @Column(name = "POSITION")
+    @Enumerated(EnumType.STRING)
     private Position position;
 
     public StaffMember() {

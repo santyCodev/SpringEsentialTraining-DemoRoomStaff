@@ -1,23 +1,22 @@
 package com.santicodev.springessentialtraining.business.services;
 
-import com.santicodev.springessentialtraining.data.Room;
+import com.santicodev.springessentialtraining.data.entity.Room;
+import com.santicodev.springessentialtraining.data.repository.RoomRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Service
 public class RoomService {
 
-    private static final List<Room> rooms = new ArrayList<>();
+    private final RoomRepository roomRepository;
 
-    static {
-        for(int i=0; i<10; i++) {
-            rooms.add(new Room(i, "Room "+ i, "R"+ i, "Q"));
-        }
+    public RoomService(RoomRepository roomRepository) {
+        this.roomRepository = roomRepository;
     }
 
-    public static List<Room> getAllRooms() {
-        return rooms;
+    public List<Room> getAllRooms() {
+        return roomRepository.findAll();
     }
 }

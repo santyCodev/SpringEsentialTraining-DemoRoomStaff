@@ -1,4 +1,4 @@
-package com.santicodev.springessentialtraining.data;
+package com.santicodev.springessentialtraining.data.entity;
 
 public enum Position {
 
