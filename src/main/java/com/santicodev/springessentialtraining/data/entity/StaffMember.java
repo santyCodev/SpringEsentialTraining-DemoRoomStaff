@@ -9,7 +9,7 @@ public class StaffMember {
     @Id
     @Column(name = "EMPLOYEE_ID")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String id;
+    private long id;
 
     @Column(name = "FIRST_NAME")
     private String firstName;
@@ -24,18 +24,18 @@ public class StaffMember {
     public StaffMember() {
     }
 
-    public StaffMember(String id, String firstName, String lastName, Position position) {
+    public StaffMember(long id, String firstName, String lastName, Position position) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.position = position;
     }
 
-    public String getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(long id) {
         this.id = id;
     }
 
